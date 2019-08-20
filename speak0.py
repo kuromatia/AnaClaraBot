@@ -9,7 +9,7 @@ class speaker0:
         self.script = ""
         self.cmd = ""
         self.output_file_name = ""
-        self.read_file_name = "sample_script.txt"
+        self.read_file_name = ["sample_script.txt"]
         # self.output_file_list = ["wav/tenki1.wav", "wav/tenki2.wav", "wav/tenki3.wav", "wav/tenki4.wav", "wav/tenki5.wav", "wav/tenki6.wav", "wav/tenki7.wav"]
         self.output_file_list = ["wav/sample.wav", "wav/sample2.wav", "wav/sample3.wav","wav/sample4.wav",]
 
