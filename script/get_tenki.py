@@ -15,7 +15,7 @@ class GetTenki:
         response = urllib.request.urlopen(url)
         soup = BeautifulSoup(response, "html.parser")
         data = soup.find_all("section", class_='today-weather')
-        print("request https://tenki.jp/ ...ok")
+        print("requesting https://tenki.jp/ ...")
         for i in data:
             day = i.find("h3", class_='left-style').text
             tenki = i.find("p", class_='weather-telop').text
