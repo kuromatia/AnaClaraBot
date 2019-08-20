@@ -33,7 +33,6 @@ class speaker:
             self.write_script(i)
             sp.call(self.cmd, shell=True)
             sp.call("aplay {0}".format(self.output_file_name), shell=True)
-            
 
 
 if __name__ == '__main__':
