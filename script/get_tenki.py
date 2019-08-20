@@ -38,7 +38,7 @@ class GetTenki:
         print(rain)
 
         result_txt = "今日は" + day + youbi +  "曜日です。\n"
-        result_txt2 = "天気は" + tenki + "です。\n" + "最高気温は" + max_temp + "度" + "最低気温は" + low_temp + "度" +  "降水確率は" + rain + "パーセントです。"
+        result_txt2 = "天気は" + tenki + "です。\n" + "最高気温は" + max_temp + "度\n" + "最低気温は" + low_temp + "度\n" +  "降水確率は" + rain + "パーセントです。\n"
         greeting = "おはようございます。\n今日も1日頑張りましょう。\n"
 
         with open("tenki_script.txt", "w") as f:
