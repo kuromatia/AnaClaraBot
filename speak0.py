@@ -42,7 +42,9 @@ class speaker0:
         self.script = self.script.split("\n")
         try:
             self.script.remove("")
-
+        except:
+            pass
+            
         print("loading...")
         for cnt, i in enumerate(self.script):
             self.write_script(i, self.output_file_list[cnt])
