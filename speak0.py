@@ -20,6 +20,7 @@ class speaker0:
         args = parser.parse_args()
 
         self.read_file_name = args.input
+        print(self.read_file_name)
 
     def read_file(self, file_name="script.txt"):
         with open(file_name, "r") as f:
@@ -39,7 +40,8 @@ class speaker0:
         self.get_args()
         self.read_file(self.read_file_name[0])
         self.script = self.script.split("\n")
-        self.script.remove("")
+        try:
+            self.script.remove("")
 
         print("loading...")
         for cnt, i in enumerate(self.script):
