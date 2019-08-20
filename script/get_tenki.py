@@ -4,8 +4,6 @@
 from bs4 import BeautifulSoup
 import urllib
 import urllib.request
-import time
-import os
 import re
 
 
@@ -30,6 +28,9 @@ class GetTenki:
         low_temp = re.search("\d*", low_temp).group()
         rain = re.findall("\d*(?=%)", rain)
         rain = max(rain)
+
+        if re.search("^0",day):
+            day = day[1:]
 
         print(day)
         print(youbi)
