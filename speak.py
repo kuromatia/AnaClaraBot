@@ -9,7 +9,7 @@ class speaker:
         self.script = ""
         self.cmd = ""
         self.output_file_name = ""
-        self.output_file_list = ["tenki1.wav", "tenki2.wav", "tenki3.wav", "tenki4.wav", "tenki5.wav", "tenki6.wav", "tenki7.wav"]
+        self.output_file_list = ["wav/tenki1.wav", "wav/tenki2.wav", "wav/tenki3.wav", "wav/tenki4.wav", "wav/tenki5.wav", "wav/tenki6.wav", "wav/tenki7.wav"]
 
     def read_file(self, file_name="script.txt"):
         with open(file_name, "r") as f:
@@ -30,6 +30,7 @@ class speaker:
         self.script = self.script.split("\n")
         self.script.remove("")
 
+        print("loading...")
         for cnt, i in enumerate(self.script):
             self.write_script(i, self.output_file_list[cnt])
             sp.call(self.cmd, shell=True)

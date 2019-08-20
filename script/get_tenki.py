@@ -32,12 +32,12 @@ class GetTenki:
         if re.search("^0",day):
             day = day[1:]
 
-        print(day)
-        print(youbi)
-        print(tenki)
-        print(max_temp)
-        print(low_temp)
-        print(rain)
+        # print(day)
+        # print(youbi)
+        # print(tenki)
+        # print(max_temp)
+        # print(low_temp)
+        # print(rain)
 
         result_txt = "今日は" + day + youbi +  "曜日です。\n"
         result_txt2 = "天気は" + tenki + "です。\n" + "最高気温は" + max_temp + "度\n" + "最低気温は" + low_temp + "度\n" +  "降水確率は" + rain + "パーセントです。\n"
