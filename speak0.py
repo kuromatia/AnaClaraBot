@@ -37,7 +37,7 @@ class speaker0:
 
     def main(self):
         self.get_args()
-        self.read_file(self.read_file_name)
+        self.read_file(self.read_file_name[0])
         self.script = self.script.split("\n")
         self.script.remove("")
 
