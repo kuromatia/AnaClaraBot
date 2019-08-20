@@ -10,7 +10,7 @@ def main():
         today = today[1:]
 
     with open("current_time.txt", "w") as f:
-        f.write("現在時刻は"+today+"です。")
+        f.write("現在"+today+"です。")
 
 
 if __name__ == '__main__':
