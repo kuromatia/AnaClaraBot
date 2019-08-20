@@ -25,7 +25,7 @@ class speaker:
 
 
     def main(self):
-        self.read_file("script.txt")
+        self.read_file("text_script.txt")
         self.script = self.script.split("\n")
         self.script.remove("")
 
