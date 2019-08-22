@@ -1,5 +1,5 @@
 #! /bin/bash
 
-python3 script/get_datetime.py
-python3 speak0.py -i "current_time.txt"
+python3 /home/pi/AnaClaraBot/script/get_datetime.py
+python3 /home/pi/AnaClaraBot/speak0.py -i "/home/pi/AnaClaraBot/current_time.txt"
 rm ./wav/*.wav
