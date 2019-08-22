@@ -8,7 +8,7 @@ import subprocess as sp
 
 def main():
     today = datetime.datetime.today().strftime("%Y/%m/%d %H:%M:%S")
-    sp.call("date -s \"{0}\"".format(today), shell=True)
+    sp.call("sudo date -s \"{0}\"".format(today), shell=True)
 
 if __name__ == '__main__':
     main()
