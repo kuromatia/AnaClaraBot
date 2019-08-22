@@ -8,7 +8,7 @@ import subprocess as sp
 
 def main():
     today = datetime.datetime.today().strftime("%Y/%m/%d %H:%M:%S")
-    print(today)
+    sp.call("date -s {0}".format(today), shell=True)
 
 
 
