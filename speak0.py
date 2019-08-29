@@ -56,6 +56,7 @@ class speaker0:
 
         for cnt, i in enumerate(self.script):
             self.write_script(i, self.output_file_list[cnt])
+            print(self.cmd)
             sp.call(self.cmd, shell=True)
 
         for i in self.output_file_list:
