@@ -35,7 +35,7 @@ class speaker0:
 
     def write_script(self, input_txt="a", output_file_name="open_jtalk_tmp.wav"):
         self.output_file_name = output_file_name
-        self.cmd = "echo '{0}' | open_jtalk -m /usr/share/hts-voice/htsvoice-tohoku-f01/tohoku-f01-neutral.htsvoice -x /var/lib/mecab/dic/open-jtalk/naist-jdic -ow ./{1}".format(input_txt, output_file_name)
+        self.cmd = "echo '{0}' | open_jtalk -m /usr/share/hts-voice/htsvoice-tohoku-f01/tohoku-f01-neutral.htsvoice -x /var/lib/mecab/dic/open-jtalk/naist-jdic -ow {1}".format(input_txt, output_file_name)
         return(self.cmd)
 
     def call_aplay(self):
@@ -56,7 +56,7 @@ class speaker0:
 
         for cnt, i in enumerate(self.script):
             self.write_script(i, self.output_file_list[cnt])
-            print(self.cmd)
+            # print(self.cmd)
             sp.call(self.cmd, shell=True)
 
         for i in self.output_file_list:
