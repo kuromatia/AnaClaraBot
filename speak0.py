@@ -53,8 +53,6 @@ class speaker0:
         print("loading...")
         self.output_file_list = [os.path.join(self.pwd, "wav/sample") + str(i)+".wav" for i in range(len(self.script))]
         print(self.output_file_list)
-        return(0)
-
 
         for cnt, i in enumerate(self.script):
             self.write_script(i, self.output_file_list[cnt])
