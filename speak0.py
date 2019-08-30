@@ -13,12 +13,6 @@ class speaker0:
         self.output_file_name = ""
         self.read_file_name = ["sample_script.txt"]
         self.pwd = os.path.dirname(os.path.abspath(__file__))
-        # self.output_file_list = ["wav/tenki1.wav", "wav/tenki2.wav", "wav/tenki3.wav", "wav/tenki4.wav", "wav/tenki5.wav", "wav/tenki6.wav", "wav/tenki7.wav"]
-        # self.output_file_list = ["wav/sample.wav", "wav/sample2.wav", "wav/sample3.wav", "wav/sample4.wav",]
-
-        # print(os.path.join(self.pwd, self.output_file_list[0]))
-        # self.output_file_list = [os.path.join(self.pwd, "wav/sample") + str(i)+".wav" for i in range(100)]
-        # print(self.output_file_list)
 
     def get_args(self):
         from argparse import ArgumentParser
@@ -56,12 +50,10 @@ class speaker0:
 
         for cnt, i in enumerate(self.script):
             self.write_script(i, self.output_file_list[cnt])
-            # print(self.cmd)
             sp.call(self.cmd, shell=True)
 
         for i in self.output_file_list:
             sp.call("aplay {0}".format(i), shell=True)
-
 
 
 if __name__ == '__main__':
